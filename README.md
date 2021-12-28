@@ -18,15 +18,15 @@ You may also see any lint errors in the console.
 
 If you change files outside `src` folder you need to re-build the image and then run `docker-compose up`
 
-### `docker build -t create-react-app:<version> .`
+### `docker build -t vincexgliu/create-react-app:<version> .`
 
 Builds the app for production Docker image with `version` as its tag.
 
-### `docker run -p 3000:80 create-react-app:<version>` 
+### `docker run -p 3000:80 vincexgliu/create-react-app:<version>` 
 
 Open [http://localhost:3000](http://localhost:3000) to test production image and see if it can work as expected.
 
-### `docker push create-react-app:<version>`
+### `docker push vincexgliu/create-react-app:<version>`
 
 Push docker image to docker hub. (Guarantee you have logon the correct account).
 
