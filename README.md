@@ -28,5 +28,5 @@ Open [http://localhost:3000](http://localhost:3000) to test production image and
 
 ### `docker push vincexgliu/create-react-app:<version>`
 
-Push docker image to docker hub. (Guarantee you have logon the correct account).
+Push docker image to [Dockerhub](https://hub.docker.com/repository/docker/vincexgliu/create-react-app). (Guarantee you have logon the correct account).
 
