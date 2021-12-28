@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `docker-compose up`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,13 +14,19 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run build`
+### `docker-compose build` 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you change files outside `src` folder you need to re-build the image and then run `docker-compose up`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `docker build -t create-react-app:<version> .`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production Docker image with `version` as its tag.
+
+### `docker run -p 3000:80 create-react-app:<version>` 
+
+Open [http://localhost:3000](http://localhost:3000) to test production image and see if it can work as expected.
+
+### `docker push create-react-app:<version>`
+
+Push docker image to docker hub. (Guarantee you have logon the correct account).
 
