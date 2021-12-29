@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: create-react-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: create-react-app # selected Pods
+  template: # Pod template
+    metadata:
+      labels:
+        app: create-react-app
+    spec:
+      containers:
+        - name: create-react-app
+          # here is prepared CRA docker image,
+          # total address is https://hub.docker.com/repository/docker/vincexgliu/create-react-app
+          image: vincexgliu/create-react-app:1.0.0
