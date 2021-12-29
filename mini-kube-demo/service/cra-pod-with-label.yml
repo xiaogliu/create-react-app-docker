@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: create-react-app
+  labels:
+    app: create-react-app # Add labels so Service can find it
+spec:
+  containers:
+  - name: create-react-app
+    # here is prepared CRA docker image,
+    # total address is https://hub.docker.com/repository/docker/vincexgliu/create-react-app
+    image: vincexgliu/create-react-app:1.0.0

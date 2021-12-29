@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: create-react-app
+spec:
+  ports:
+    - name: http
+      port: 3000 # exposed port
+      targetPort: 80 # Pod port
+  selector:
+    app: create-react-app # targeted Pods' label
+  # Used for local develop so we can access the service outside k8s cluster (local machine). 
+  # All types of Service resource https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+  type: NodePort
