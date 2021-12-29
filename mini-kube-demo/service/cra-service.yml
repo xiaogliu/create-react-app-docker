@@ -7,6 +7,9 @@ spec:
     - name: http
       port: 3000 # exposed port
       targetPort: 80 # Pod port
+      # 30000-32767, exposed Node port that can access by outside of cluster
+      # Optional field, if not set will be distributed a random number
+      nodePort: 30000 # 30000-32767, Optional field
   selector:
     app: create-react-app # targeted Pods' label
   # Used for local develop so we can access the service outside k8s cluster (local machine). 
