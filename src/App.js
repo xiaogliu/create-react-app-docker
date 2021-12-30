@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p className="App-version">
-          v 1.0.0
+          v 1.0.1
         </p>
         <p>
           Dockerizing CRA.
