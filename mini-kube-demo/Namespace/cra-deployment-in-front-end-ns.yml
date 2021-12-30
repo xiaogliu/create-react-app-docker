@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: create-react-app
+  namespace: front-end # specify specific Namespace
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  selector:
+    matchLabels:
+      app: create-react-app
+  template:
+    metadata:
+      labels:
+        app: create-react-app
+    spec:
+      containers:
+        - name: create-react-app
+          image: vincexgliu/create-react-app:1.0.0
