@@ -12,7 +12,7 @@ const App = () => {
       .then(data => {
         setServerInfo(data)
       })
-      .catch(err => console.log(err));
+      .catch(err => setServerInfo('Error to get server info.'));
   }, []);
 
 
