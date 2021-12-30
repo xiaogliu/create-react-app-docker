@@ -1,6 +1,21 @@
+import React, { useState, useEffect } from 'react';
+
 import './App.css';
 
-function App() {
+const App = () => {
+  const [serverInfo, setServerInfo] = useState('');
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    fetch('http://localhost:8080/api/v1/serverInfo')
+      .then(response => response.text())
+      .then(data => {
+        setServerInfo(data)
+      })
+      .catch(err => console.log(err));
+  }, []);
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -8,7 +23,7 @@ function App() {
           v 1.0.1
         </p>
         <p>
-          Dockerizing CRA.
+          Dockerizing CRA. {serverInfo}
         </p>
       </header>
     </div>
