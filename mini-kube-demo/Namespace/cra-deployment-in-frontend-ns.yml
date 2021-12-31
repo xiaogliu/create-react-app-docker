@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: create-react-app
-  namespace: front-end # specify specific Namespace
+  namespace: frontend # specify specific Namespace
 spec:
   replicas: 3
   minReadySeconds: 10
