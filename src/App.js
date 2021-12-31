@@ -10,7 +10,6 @@ const App = () => {
   const [serverInfo, setServerInfo] = useState('');
 
   useEffect(() => {
-    // Update the document title using the browser API
     fetch(`${baseURL}/api/v1/serverInfo`)
       .then(response => response.text())
       .then(data => {
