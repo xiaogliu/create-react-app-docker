@@ -22,7 +22,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <p className="App-version">
-          v 1.0.1
+          v 2.0.0
         </p>
         <p>
           {serverInfo} 
