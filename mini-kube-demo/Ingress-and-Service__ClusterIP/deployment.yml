@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
         - name: koa2
-          image: vincexgliu/koa2-server:2.0.0
+          image: vincexgliu/koa2-server:1.0.0
 ---
 apiVersion: apps/v1
 kind: Deployment

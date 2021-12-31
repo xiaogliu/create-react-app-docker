@@ -15,7 +15,6 @@ spec:
                 name: cra
                 port:
                   number: 3000
-  ingressClassName: nginx # combine different Ingresses under different namespace into one Ingress
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -34,4 +33,3 @@ spec:
                 name: koa2
                 port:
                   number: 8080
-  ingressClassName: nginx # combine different Ingresses under different namespace into one Ingress
