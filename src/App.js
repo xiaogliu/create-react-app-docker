@@ -4,7 +4,7 @@ import './App.css';
 
 const baseURL = process.env.NODE_ENV === 'development' ?
   'http://localhost:8080' :
-  'koa2-server.backend.svc.cluster.local:8080';
+  'http://koa2-server.backend.svc.cluster.local:8080';
 
 const App = () => {
   const [serverInfo, setServerInfo] = useState('');
