@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: banana
+  namespace: banana
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  selector:
+    matchLabels:
+      app: banana
+  template:
+    metadata:
+      labels:
+        app: banana
+    spec:
+      containers:
+        - name: banana
+          image: vincexgliu/banana:1.0.0
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radar
+  namespace: radar
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  selector:
+    matchLabels:
+      app: radar
+  template:
+    metadata:
+      labels:
+        app: radar
+    spec:
+      containers:
+        - name: radar
+          image: vincexgliu/radar:1.0.0
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uss
+  namespace: uss
+spec:
+  replicas: 3
+  minReadySeconds: 10
+  selector:
+    matchLabels:
+      app: uss
+  template:
+    metadata:
+      labels:
+        app: uss
+    spec:
+      containers:
+        - name: uss
+          image: vincexgliu/uss:1.0.0

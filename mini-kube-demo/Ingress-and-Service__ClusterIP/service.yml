@@ -1,0 +1,41 @@
+# Banana service
+apiVersion: v1
+kind: Service
+metadata:
+  name: banana
+  namespace: banana
+spec:
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 80
+  selector:
+    app: banana
+---
+# Radar service
+apiVersion: v1
+kind: Service
+metadata:
+  name: radar
+  namespace: radar
+spec:
+  ports:
+    - name: http
+      port: 8000
+      targetPort: 8000
+  selector:
+    app: radar
+---
+# USS service
+apiVersion: v1
+kind: Service
+metadata:
+  name: uss
+  namespace: uss
+spec:
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: uss
