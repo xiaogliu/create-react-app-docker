@@ -1,41 +1,38 @@
-# Banana service
 apiVersion: v1
 kind: Service
 metadata:
-  name: banana
-  namespace: banana
+  name: cra
+  namespace: cra
 spec:
   ports:
     - name: http
       port: 3000
       targetPort: 80
   selector:
-    app: banana
+    app: cra
 ---
-# Radar service
 apiVersion: v1
 kind: Service
 metadata:
-  name: radar
-  namespace: radar
-spec:
-  ports:
-    - name: http
-      port: 8000
-      targetPort: 8000
-  selector:
-    app: radar
----
-# USS service
-apiVersion: v1
-kind: Service
-metadata:
-  name: uss
-  namespace: uss
+  name: koa2
+  namespace: koa2
 spec:
   ports:
     - name: http
       port: 8080
       targetPort: 8080
   selector:
-    app: uss
+    app: koa2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: i18n
+  namespace: i18n
+spec:
+  ports:
+    - name: http
+      port: 8081
+      targetPort: 8081
+  selector:
+    app: i18n

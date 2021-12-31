@@ -1,59 +1,59 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: banana
-  namespace: banana
+  name: cra
+  namespace: cra
 spec:
   replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: banana
+      app: cra
   template:
     metadata:
       labels:
-        app: banana
+        app: cra
     spec:
       containers:
-        - name: banana
-          image: vincexgliu/banana:1.0.0
+        - name: cra
+          image: vincexgliu/create-react-app:2.0.1
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: radar
-  namespace: radar
+  name: koa2
+  namespace: koa2
 spec:
   replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: radar
+      app: koa2
   template:
     metadata:
       labels:
-        app: radar
+        app: koa2
     spec:
       containers:
-        - name: radar
-          image: vincexgliu/radar:1.0.0
+        - name: koa2
+          image: vincexgliu/koa2-server:2.0.0
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uss
-  namespace: uss
+  name: i18n
+  namespace: i18n
 spec:
   replicas: 3
   minReadySeconds: 10
   selector:
     matchLabels:
-      app: uss
+      app: i18n
   template:
     metadata:
       labels:
-        app: uss
+        app: i18n
     spec:
       containers:
-        - name: uss
-          image: vincexgliu/uss:1.0.0
+        - name: i18n
+          image: vincexgliu/i18n-service:1.0.0

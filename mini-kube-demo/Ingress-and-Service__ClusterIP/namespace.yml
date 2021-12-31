@@ -1,21 +1,21 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: banana
+  name: cra
   labels:
-    name: banana
+    name: cra
 # use --- to split different k8s resources
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: radar
+  name: koa2
   labels:
-    name: radar
+    name: koa2
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: uss
+  name: i18n
   labels:
-    name: uss
+    name: i18n
