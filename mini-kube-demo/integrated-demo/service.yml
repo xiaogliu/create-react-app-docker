@@ -10,6 +10,7 @@ spec:
       targetPort: 80
   selector:
     app: cra
+# use --- to split different k8s resources
 ---
 apiVersion: v1
 kind: Service

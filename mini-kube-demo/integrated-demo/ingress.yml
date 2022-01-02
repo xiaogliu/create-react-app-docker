@@ -15,6 +15,7 @@ spec:
                 name: cra
                 port:
                   number: 3000
+# use --- to split different k8s resources
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress

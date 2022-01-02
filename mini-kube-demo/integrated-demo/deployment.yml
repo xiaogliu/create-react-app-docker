@@ -17,6 +17,7 @@ spec:
       containers:
         - name: cra
           image: vincexgliu/create-react-app:2.0.1
+# use --- to split different k8s resources
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,7 +37,10 @@ spec:
     spec:
       containers:
         - name: koa2
-          image: vincexgliu/koa2-server:1.0.0
+          image: vincexgliu/koa2-server:1.0.3
+          env: # pass environment variables
+            - name: NODE_ENV
+              value: "production"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -56,4 +60,4 @@ spec:
     spec:
       containers:
         - name: i18n
-          image: vincexgliu/i18n-service:1.0.0
+          image: vincexgliu/i18n:1.0.0
